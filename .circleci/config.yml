@@ -20,17 +20,17 @@ jobs:
                 command: |
                     # Build
                       echo '_____________beginning build'
-                      docker build -t udagram-api-feed:v4 ./udagram-api-feed
-                      docker build -t udagram-api-user:v4 ./udagram-api-user
-                      docker build -t udagram-frontend:v4 ./udagram-frontend
-                      docker build -t reverseproxy:v4 ./udagram-reverseproxy  
+                      docker build -t udagram-api-feed:v5 ./udagram-api-feed
+                      docker build -t udagram-api-user:v5 ./udagram-api-user
+                      docker build -t udagram-frontend:v5 ./udagram-frontend
+                      docker build -t reverseproxy:v5 ./udagram-reverseproxy  
 
                       # Tagging
                       echo '_____________beginning tag'
-                      docker tag udagram-api-feed:v4 devopnguyenan88/udagram-api-feed:v4
-                      docker tag udagram-api-user:v4 devopnguyenan88/udagram-api-user:v4
-                      docker tag udagram-frontend:v4 devopnguyenan88/udagram-frontend:v4
-                      docker tag reverseproxy:v4 devopnguyenan88/reverseproxy:v4
+                      docker tag udagram-api-feed:v5 devopnguyenan88/udagram-api-feed:v5
+                      docker tag udagram-api-user:v5 devopnguyenan88/udagram-api-user:v5
+                      docker tag udagram-frontend:v5 devopnguyenan88/udagram-frontend:v5
+                      docker tag reverseproxy:v5 devopnguyenan88/reverseproxy:v5
 
                       echo 'DOCKER IMAGE LS____'
                       docker image ls
@@ -45,8 +45,8 @@ jobs:
                     docker login -u devopnguyenan88 -p $DOCKERPASS
                     # Pushing 
                     echo '_____________beginning push image'
-                    docker push devopnguyenan88/udagram-api-feed:v4
-                    docker push devopnguyenan88/udagram-api-user:v4
-                    docker push devopnguyenan88/udagram-frontend:v4
-                    docker push devopnguyenan88/reverseproxy:v4
+                    docker push devopnguyenan88/udagram-api-feed:v5
+                    docker push devopnguyenan88/udagram-api-user:v5
+                    docker push devopnguyenan88/udagram-frontend:v5
+                    docker push devopnguyenan88/reverseproxy:v5
           
